@@ -6,13 +6,11 @@ import com.mj.admin.web.dto.PostsListResponseDto;
 import com.mj.admin.web.dto.PostsResponseDto;
 import com.mj.admin.web.dto.PostsSaveRequestDto;
 import com.mj.admin.web.dto.PostsUpdateRequestDto;
-import javafx.geometry.Pos;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
