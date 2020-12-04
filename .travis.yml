@@ -42,7 +42,7 @@ deploy:
     application: webservice
     deployment_group: webservice-group
     region: ap-northeast-2
-    wait-untill-deployed: true
+    wait-until-deployed: true
 
 # CI 실행 완료시 메일로 알람
 # test
