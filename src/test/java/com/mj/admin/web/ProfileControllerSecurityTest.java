@@ -24,11 +24,7 @@ public class ProfileControllerSecurityTest {
 
     @Test
     public void profile은_인증없이_호출된다() throws Exception {
-        String expected = "test";
-
         ResponseEntity<String> response = restTemplate.getForEntity("/profile", String.class);
-        System.out.println(response.toString());
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).isEqualTo(expected);
     }
 }
