@@ -1,0 +1,81 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="layout/header"></th:block>
+<body>
+<th:block th:replace="layout/menu"></th:block>
+<main id="contents" class="project_detail codepresso">
+    <div>
+        <section class="location">
+            <div>
+                <p>
+                    <span class="path">메인</span>
+                    <span class="path">프로젝트</span>
+                    <span class="path on">상세정보</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="title">
+            <div>
+                <h2>
+                    온습도 모니터링
+                </h2>
+                <p class="date">2020.03 ~ 2020.04</p>
+            </div>
+        </section>
+
+        <section class="outline">
+            <div>
+                <h2>프로젝트 개요</h2>
+                <p>식품 창고의 온습도를 실시간으로 저장하여 적정 온습도를 모니터링하기 위해 개발된 프로젝트입니다.</p>
+                <p>온습도 센서와 연동하여 실시간으로 현재 온습도를 보여주고 일, 월, 년 별로 온습도를 조회할 수 있습니다.</p>
+                <p>처음으로 외부 장비와 API를 연동하여 개발한 프로젝트입니다.</p>
+                <p>현재는 2개 업체에 배포되어 서비스 되고 있습니다.</p>
+            </div>
+        </section>
+        <section class="mockup">
+            <div>
+                <img src="/images/monitoring.png" >
+            </div>
+        </section>
+        <section class="point">
+            <div>
+                <h2>배운점</h2>
+                <p>외부 장비와 API로 데이터를 처리하는 법을 배우고 postman사용법을 배웠습니다.</p>
+                <p>spring 스케줄러를 이용해서 데이터를 저장할 때 일, 월, 년 데이터를 갱신하면서 저장했는데 </p>
+                <p>오류가 나서 데이터가 제대로 안 들어가면 데이터의 일관성이 깨지는 오류가 있었습니다. </p>
+                <p>그래서 하나의 데이터라도 올바르게 저장되지 못하면 저장이 안 되도록 트랜잭션 처리를 하였습니다.</p>
+                <br>
+                <p>온습도 데이터를 조회할 때 파라미터로 시간을 넘겨줬는데 로컬에서 잘되던 프로그램이 운영 서버에서 안 되는 이슈가 있었습니다.</p>
+                <p>코드를 디버깅 했는데 이상이 없었고 알고 보니 운영 서버 Tomcat시간이 안 맞아 조회가 제대로 안 된 상황이었습니다. </p>
+                <p>서비스를 배포할 때는 코드뿐만 아니라 서버 등 인프라 환경에 대한 지식도 중요함을 알게 되었습니다.</p>
+                <br>
+                <p>아쉬운 점으로는 온습도 센서가 와이파이로 통신을 하여 유선보다는 안정성이 떨어졌는데</p>
+                <p>접속이 끊어진 센서에 대해 알림이 오면 즉각 조치를 할 수 있는데 접속 문제에 대해 처리하지 못한 아쉬움이 있습니다.</p>
+            </div>
+        </section>
+        <section class="skills">
+            <div>
+                <h2>개발 기술</h2>
+                <p>HTML/CSS·JQuery·KendoUI</p>
+                <p>Spring·PostgreSQL</p>
+                <p>Git</p>
+            </div>
+        </section>
+        <section class="back">
+            <div>
+                <a href="/project">
+                    목록으로 가기
+                </a>
+            </div>
+        </section>
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--index.js 추가-->
+<script src="/js/app/index.js"></script>
+</body>
+
+</html>

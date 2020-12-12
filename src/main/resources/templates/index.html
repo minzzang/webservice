@@ -1,0 +1,73 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="layout/header"></th:block>
+<body>
+<th:block th:replace="layout/menu"></th:block>
+<main id="contents" class="index">
+    <section class="visual">
+        <div class="slide">
+            안녕하세요
+            <div>
+                <p>최고의 백엔드 엔지니어를 꿈꾸는 개발자 장민제입니다.</p>
+                <p class="text-effect"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div>
+            <h2>Skills</h2>
+            <p>
+                웹 개발 파트별로 정리한 간략한 기술 스택입니다.<br>
+                분야별 기술에 대하여 더 자세한 내용은 소개 페이지에서 확인 하실 수 있습니다.
+            </p>
+            <ul>
+                <li>
+                    <div>
+                        <img src="/images/frontend.png">
+                        <h3>Frontend</h3>
+                    </div>
+                    <p>HTML·CSS·JQuery 웹 퍼블리싱</p>
+                </li>
+                <li>
+                    <div>
+                        <img src="/images/backend.png">
+                        <h3>Backend</h3>
+                    </div>
+                    <p>SpringBoot REST API 구축<br>DB 스키마 설계</p>
+                </li>
+                <li>
+                    <div>
+                        <img src="/images/server.png">
+                        <h3>Devops</h3>
+                    </div>
+                    <p>Linux·AWS 서버 구축<br>Git 버전관리</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="projects">
+        <div>
+            <ul>
+                <li>
+                    <a href="/project">
+                        <h3>회사 프로젝트</h3>
+                        <p>회사에서 진행한 프로젝트 입니다.</p>
+                        <p>애플리케이션 개발이 완료되어 현재 운영되고 있습니다.</p>
+                        <div class="more">상세 보기<i class="mdi mdi-arrow-right"></i></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--index.js 추가-->
+<script src="/js/app/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<header xmlns:th="http://www.thymeleaf.org">
+    <div>
+        <h1><a href="/"><img src="/images/logo.png"></a></h1>
+        <th:block th:if="${user}">
+        <a class="member_dropdown mobile_member"><img th:src="${user.getPicture()}" /></a>
+        <div class="member_menu dropdown">
+            <a class="menu_item" href="/logout">로그아웃</a>
+        </div>
+        </th:block>
+        <a th:if="!${user}" class="mobile_member" href="/login"><img src="/images/default_thumbnail.png" /></a>
+        <div class="member_menu dropdown">
+        </div>
+        <button id="burger" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="lnb menu">
+            <ul>
+                <li><a href="/about" class="">소개</a></li>
+                <li><a href="/project" class="">프로젝트</a></li>
+                <li><a href="https://github.com/minzzang" target="_blank">깃허브</a></li>
+            </ul>
+        </nav>
+        <nav class="lnb account">
+            <ul>
+                <li th:if="${user}">
+                    <a class="member_dropdown" href="javascript:;">
+                        <img th:src="${user.getPicture()}" />
+                        <div class="name">[[${user.getName()}]]</div>
+                        <i class="mdi mdi-menu-down"></i>
+                    </a>
+                </li>
+                <li th:if="!${user}"><a href="/login"><img src="/images/default_thumbnail.png" />로그인</a></li>
+            </ul>
+            <div class="member_menu dropdown">
+            </div>
+        </nav>
+        <div id="overlay" class="overlay"></div>
+    </div>
+</header>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="layout/header"></th:block>
+<body>
+<th:block th:replace="layout/menu"></th:block>
+<main id="contents" class="project">
+    <div>
+        <section class="location">
+            <div>
+                <p>
+                    <span class="path">메인</span>
+                    <span class="path on">프로젝트</span>
+                </p>
+            </div>
+        </section>
+        <h2 class="hide">타이틀</h2>
+        <section class="title">
+            <div>
+                <h2>
+                    개발을 통해 작은 문제를 해결하고 개선한
+                    <br class="visual_pc">
+                    프로젝트들을 정리 했어요
+                </h2>
+            </div>
+        </section>
+        <section class="biz" id="biz">
+            <div>
+                <h2>회사 프로젝트</h2>
+                <p>구성원으로서 작은 성과를 냈던 프로젝트 입니다.</p>
+                <p>보안상 간략하게 내용을 담았습니다.</p>
+                <ul class="list-box">
+                    <li>
+                        <div class="intro">
+                            <div class="logo">
+                                <img src="/images/inwoo.png" alt="인우기술 로고">
+                            </div>
+                            <div class="outline">
+                                <h3>온습도 모니터링</h3>
+                                <div>2020.03 ~ 2020.04</div>
+                                <div>인우기술</div>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <ul>
+                                <li>Spring, HTML/CSS, JQuery, PostgreSql</li>
+                                <li>온습도 대시보드 및 상세 온습도 화면 개발</li>
+                                <li>Spring quartz를 이용해 일정 시간 간격으로 온습도 api 호출</li>
+                                <li>시간, 일, 월, 년 별로 온습도 데이터 검색기능 개발</li>
+                                <li>개발 인원 2인</li>
+                            </ul>
+                        </div>
+                        <div class="link">
+                            <a href="/project/monitoring" class="icon">
+                                상세<i class="mdi mdi-chevron-right"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="intro">
+                            <div class="logo">
+                                <img src="/images/inwoo.png" alt="인우기술 로고">
+                            </div>
+                            <div class="outline">
+                                <h3>웹 MES 솔루션</h3>
+                                <div>2019.07 ~ 2020.09</div>
+                                <div>인우기술</div>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <ul>
+                                <li>Spring, HTML/CSS, JQuery, PostgreSql</li>
+                                <li>공장에서 현장 작업자들이 사용하는 화면 개발</li>
+                                <li>공장의 프로세스에 맞게 생산 업무 로직 커스터마이징(4개 업체 개발)</li>
+                                <li>비효율적인 코드를 리팩토링하여 저장 시간 단축(3초 -> 0.5초)</li>
+                                <li>기획·퍼블리싱·백엔드·배포·유지보수</li>
+                                <li>개발 인원 2인</li>
+                            </ul>
+                        </div>
+                        <div class="link">
+                            <a href="/project/mes" class="icon">
+                                상세<i class="mdi mdi-chevron-right"></i>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--index.js 추가-->
+<script src="/js/app/index.js"></script>
+</body>
+
+</html>
