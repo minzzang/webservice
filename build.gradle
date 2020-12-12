@@ -32,7 +32,12 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-mustache')
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     compile('org.springframework.session:spring-session-jdbc')
+    compile('org.springframework.boot:spring-boot-devtools')
     compile('mysql:mysql-connector-java')
+    compile('com.google.api-client:google-api-client:1.30.9')
+    compile('com.google.oauth-client:google-oauth-client-jetty:1.23.0')
+    compile('com.google.apis:google-api-services-youtube:v3-rev222-1.25.0')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     testCompile('org.springframework.security:spring-security-test')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

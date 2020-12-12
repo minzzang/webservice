@@ -1,6 +1,14 @@
 var main = {
     init : function () {
         var _this = this;
+        $('#burger').on('click', function () {
+            $('.menu').toggleClass("collapse");
+        });
+
+        $('.member_dropdown').on('click', function () {
+            $('.dropdown').toggleClass("on");
+        });
+
         $('#btn-save').on('click', function () {
             _this.save();
         });
@@ -12,6 +20,19 @@ var main = {
         $('#btn-delete').on('click', function () {
             _this.delete();
         });
+    },
+    logout : function () {
+    $.ajax({
+                    type: 'POST',
+                    url: '/logout',
+                    dataType: 'json',
+                    contentType:'application/json; charset=utf-8',
+                }).done(function() {
+                    alert('로그아웃 되었습니다.');
+                    window.location.href = '/';
+                }).fail(function (error) {
+                    alert(JSON.stringify(error));
+                });
     },
     save : function () {
         var data = {
