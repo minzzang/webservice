@@ -36,7 +36,7 @@ public class IndexController {
         if (user != null) {
             model.addAttribute("user", user);
         }
-        return "/project/" + name;
+        return "project/" + name;
     }
 
     @GetMapping("/about")
